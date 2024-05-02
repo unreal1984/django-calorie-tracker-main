@@ -118,7 +118,9 @@
     var carbs = 0, protein = 0, fats = 0, calories = 0;
 
     for (var i = 1; i < table.rows.length - 1; i++) {
-        console.log(table.rows[i].cells[1].innerHTML);
+        console.log(table);
+        console.log(table.rows[i].cells[2].innerHTML);
+
         carbs += parseFloat(table.rows[i].cells[1].innerHTML);
         carbs = Math.round(carbs);
         protein += parseFloat(table.rows[i].cells[2].innerHTML);
