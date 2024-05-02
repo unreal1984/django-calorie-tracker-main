@@ -118,8 +118,9 @@
     var carbs = 0, protein = 0, fats = 0, calories = 0;
 
     for (var i = 1; i < table.rows.length - 1; i++) {
-        console.log(table);
-        console.log(table.rows[i].cells[2].innerHTML);
+        
+//        console.log(table.rows[i].cells[2].innerHTML);
+
 
         carbs += parseFloat(table.rows[i].cells[1].innerHTML);
         carbs = Math.round(carbs);
@@ -130,7 +131,10 @@
         calories += parseFloat(table.rows[i].cells[4].innerHTML);
         calories = Math.round(calories);
     }
+    console.log(carbs);
+    console.log(protein);
     console.log(fats);
+    console.log(calories);
 
     document.getElementById("totalCarbs").innerHTML = '<b>' + carbs + '(gm)</b>';
     document.getElementById("totalProtien").innerHTML = '<b>' + protein + '(gm)</b>';
@@ -167,7 +171,7 @@
                     'rgba(255, 206, 86, 1)',
 
                 ],
-                borderWidth: 1
+                borderWidth: 3
             }]
         },
 
