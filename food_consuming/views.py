@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .models import Food, Consume
+from food_consuming.models import Food, Consume
 from django.http import HttpResponse
 # Create your views here.
 
@@ -15,6 +15,7 @@ class IndexView(TemplateView):
         context['foods'] = Food.objects.all()
         context['consumed_food'] = Consume.objects.filter(user=self.request.user)
         return context
+        
 
     def post(self, request, *args, **kwargs):
         food_consumed = request.POST['food_consumed']
